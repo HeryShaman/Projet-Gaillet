@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|c:\\users\\heryr\\documents\\fichiers unity\\projet-gaillet\\assets\\scripts\\tool objects\\extraction tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tool objects\\extraction tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Extraction Tool.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T15:02:33.801Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
