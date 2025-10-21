@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|c:\\users\\heryr\\documents\\fichiers unity\\projet-gaillet\\assets\\scripts\\tool objects\\extraction tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tool objects\\extraction tool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|c:\\users\\heryr\\documents\\fichiers unity\\projet-gaillet\\assets\\scripts\\systems\\movement\\movementbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systems\\movement\\movementbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\scripts\\systems\\movement\\controller\\carrier_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systems\\movement\\controller\\carrier_controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\scripts\\systems\\movement\\movementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\systems\\movement\\movementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\scripts\\managers\\character_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\character_manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\playercollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\playercollisionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\sphereresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\sphereresource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\assets\\scaleblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE1DA83-936A-1045-E488-B1D53348757A}|Assembly-CSharp.csproj|solutionrelative:assets\\scaleblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +43,87 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Extraction Tool.cs",
-              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
-              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Tool Objects\\Extraction Tool.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "MovementBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\MovementBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\Movement\\MovementBehaviour.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\MovementBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Systems\\Movement\\MovementBehaviour.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T15:02:33.801Z",
+              "WhenOpened": "2025-10-21T09:01:14.581Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Carrier_Controller.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\Controller\\Carrier_Controller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\Movement\\Controller\\Carrier_Controller.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\Controller\\Carrier_Controller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Systems\\Movement\\Controller\\Carrier_Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T17:56:50.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SphereResource.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\SphereResource.cs",
+              "RelativeDocumentMoniker": "Assets\\SphereResource.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\SphereResource.cs",
+              "RelativeToolTip": "Assets\\SphereResource.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T18:27:32.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ScaleBlock.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\ScaleBlock.cs",
+              "RelativeDocumentMoniker": "Assets\\ScaleBlock.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\ScaleBlock.cs",
+              "RelativeToolTip": "Assets\\ScaleBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T18:24:13.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerCollisionHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\PlayerCollisionHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\PlayerCollisionHandler.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\PlayerCollisionHandler.cs",
+              "RelativeToolTip": "Assets\\PlayerCollisionHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIAwwBQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T18:22:24.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Character_Manager.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Managers\\Character_Manager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\Character_Manager.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Managers\\Character_Manager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\Character_Manager.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T17:59:11.399Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MovementSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\MovementSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Systems\\Movement\\MovementSystem.cs",
+              "ToolTip": "C:\\Users\\Heryr\\Documents\\Fichiers UNITY\\Projet-Gaillet\\Assets\\Scripts\\Systems\\Movement\\MovementSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Systems\\Movement\\MovementSystem.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-20T17:58:04.167Z"
             }
           ]
         }
