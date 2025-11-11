@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Tree
-  - CarrySphere
-  - ScaleBlock
-  - SphereResource
-  - TreeResource
+  - Ennemy
+  - Enemy
   layers:
   - Default
   - TransparentFX
