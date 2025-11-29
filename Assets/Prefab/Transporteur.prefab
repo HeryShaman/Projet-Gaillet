@@ -125,18 +125,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155e61eafff0bb747964845651d5e329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 4
-  MaxHealth: 10
+  MaxSpeed: 5
+  MaxHealth: 5
   CurrentHealth: 0
-  actionRadius: 4
+  actionRadius: 10
   EnemyModel: {fileID: 6758735772701705031}
-  MinScale: 0.5
+  MinScale: 0.1
   MaxScale: 1
   ScaleSpeed: 5
-  detectionPlayerRadius: 10
+  detectionPlayerRadius: 15
   infectDistance: 2
-  fleeSpeedMultiplier: 1.5
+  fleeSpeedMultiplier: 1.1
   searchInterval: 0.1
+  disperseRadius: 5
+  regenerationRate: 2
+  stayRadius: 3
+  followers: []
+  maxFollowers: 2
 --- !u!143 &7840228570046818987
 CharacterController:
   m_ObjectHideFlags: 0

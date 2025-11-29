@@ -20,7 +20,6 @@ public abstract class EnemyBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        CurrentHealth = MaxHealth;
         if (EnemyModel != null)
             targetScale = Vector3.one * MaxScale;
     }
@@ -33,13 +32,15 @@ public abstract class EnemyBase : MonoBehaviour
             Vector3 currentScale = EnemyModel.localScale;
             EnemyModel.localScale = Vector3.Lerp(currentScale, targetScale, ScaleSpeed * Time.deltaTime);
         }
+        UpdateTargetScale();
     }
 
     public virtual void TakeDamage(float amount)
     {
         CurrentHealth -= amount;
-        if (CurrentHealth <= 0) Die();
         UpdateTargetScale();
+        if (CurrentHealth <= 0) Die();
+
     }
 
     protected virtual void Die()

@@ -129,7 +129,7 @@ MonoBehaviour:
   actionRadius: 10
   EnemyModel: {fileID: 7416282834010863475}
   MinScale: 0.5
-  MaxScale: 1.5
+  MaxScale: 2
   ScaleSpeed: 5
   transporterPrefab: {fileID: 6701230996886309562, guid: f90e82520420cb649962e50e261ffa5e, type: 3}
   hunterPrefab: {fileID: 6697464548979796304, guid: b1639930d7ecd5f4a97c5b8533f2f6b3, type: 3}
@@ -137,8 +137,10 @@ MonoBehaviour:
   MaxSpawnCount: 10
   MinSpawnPerCycle: 2
   MaxSpawnPerCycle: 2
-  HealthCostPerSpawn: 8
-  SpawnInterval: 10
+  HealthCostPerSpawn: 6
+  SpawnInterval: 8
+  MaxTransporterSpawn: 2
+  MaxHunterSpawn: 3
   currentState: 0
   neutralMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   infectedMaterial: {fileID: 2100000, guid: d9682e740897f084a90ab147f006629a, type: 2}

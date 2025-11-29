@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ennemy
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Tool

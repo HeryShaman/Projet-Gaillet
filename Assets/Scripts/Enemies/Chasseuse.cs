@@ -8,7 +8,9 @@ public class EnemyHunter : EnemyBase
     public float rangeAroundReproducer = 5f;
     public float rangeAroundTransporter = 2f;
     public float attackRange = 2f;
-    public float drainRate = 10f; // vitalité drainée par seconde au joueur
+
+    public float detectionTransporterRange = 6f; // distance pour se mettre en mode suivi
+    public float followDistanceBehind = 2f;      // distance derrière le transporter
 
     private NavMeshAgent agent;
     private Transform player;
@@ -17,11 +19,15 @@ public class EnemyHunter : EnemyBase
     private float wanderTimer = 2f;
     private float timer;
 
+    // Suivi du transporter
+    private EnemyTransporter currentFollowTarget = null;
+
     protected override void Start()
     {
         base.Start();
+        base.CurrentHealth = MaxHealth;
         agent = GetComponent<NavMeshAgent>();
-        player = FindFirstObjectByType<CellController>().transform;
+        player = FindFirstObjectByType<PlayerController>().transform;
         timer = wanderTimer;
     }
 
@@ -31,12 +37,25 @@ public class EnemyHunter : EnemyBase
 
         float playerDist = Vector3.Distance(transform.position, player.position);
 
+        // Mode attaque
         if (playerDist <= attackRange)
         {
             AttackPlayer();
+            ReleaseTransporter();
             return;
         }
 
+        // Si on suit un transporter, continuer ce comportement
+        if (currentFollowTarget != null)
+        {
+            FollowTransporter();
+            return;
+        }
+
+        // Sinon, vérifier si un transporter peut être suivi près de nous
+        LookForTransporterToFollow();
+
+        // Si aucun suivi → comportement normal
         timer += Time.deltaTime;
         if (timer >= wanderTimer)
         {
@@ -45,6 +64,70 @@ public class EnemyHunter : EnemyBase
             timer = 0f;
         }
     }
+
+    // --------------------------------------------------------------------------
+    // ----------------------------- SUIVI DU TRANSPORTEUR -----------------------
+    // --------------------------------------------------------------------------
+
+    void LookForTransporterToFollow()
+    {
+        EnemyTransporter[] transporters = FindObjectsByType<EnemyTransporter>(FindObjectsSortMode.None);
+
+        EnemyTransporter nearest = null;
+        float minDist = Mathf.Infinity;
+
+        foreach (var t in transporters)
+        {
+            float d = Vector3.Distance(transform.position, t.transform.position);
+
+            if (d < detectionTransporterRange && d < minDist)
+            {
+                nearest = t;
+                minDist = d;
+            }
+        }
+
+        if (nearest == null) return;
+
+        // Vérifier s'il reste une place (max 2 hunters)
+        if (nearest.TryAddHunterFollower(this))
+        {
+            currentFollowTarget = nearest;
+        }
+    }
+
+    void FollowTransporter()
+    {
+        if (currentFollowTarget == null)
+            return;
+
+        // Si trop loin → abandonner le suivi
+        float dist = Vector3.Distance(transform.position, currentFollowTarget.transform.position);
+        if (dist > detectionTransporterRange * 2f)
+        {
+            ReleaseTransporter();
+            return;
+        }
+
+        // Position derrière le transporter
+        Vector3 behindPos = currentFollowTarget.transform.position
+                          - currentFollowTarget.transform.forward * followDistanceBehind;
+
+        agent.SetDestination(behindPos);
+    }
+
+    void ReleaseTransporter()
+    {
+        if (currentFollowTarget != null)
+        {
+            currentFollowTarget.RemoveHunterFollower(this);
+            currentFollowTarget = null;
+        }
+    }
+
+    // --------------------------------------------------------------------------
+    // ----------------------------- COMPORTEMENT NORMAL -------------------------
+    // --------------------------------------------------------------------------
 
     void UpdateTargets()
     {
@@ -67,15 +150,6 @@ public class EnemyHunter : EnemyBase
     void AttackPlayer()
     {
         agent.SetDestination(player.position);
-
-        // Drain la vitalité du joueur et perd de la vie
-        var controller = player.GetComponent<CellController>();
-        if (controller != null)
-        {
-            controller.CurrentVitality -= drainRate * Time.deltaTime;
-            TakeDamage(Time.deltaTime * 1f); // le chasseur s'épuise doucement
-            Debug.Log($"{name} draine {drainRate * Time.deltaTime:F1} vitalité au joueur !");
-        }
     }
 
     T FindNearest<T>() where T : EnemyBase

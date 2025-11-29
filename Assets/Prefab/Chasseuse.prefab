@@ -123,18 +123,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1651202e9c23c4da561af90b1f2b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 5
+  MaxSpeed: 6
   MaxHealth: 10
   CurrentHealth: 0
   actionRadius: 10
   EnemyModel: {fileID: 1738273936625937631}
   MinScale: 0.5
-  MaxScale: 1.5
+  MaxScale: 1
   ScaleSpeed: 5
   rangeAroundReproducer: 10
-  rangeAroundTransporter: 5
-  attackRange: 10
-  drainRate: 10
+  rangeAroundTransporter: 8
+  attackRange: 12
+  detectionTransporterRange: 10
+  followDistanceBehind: 0
 --- !u!143 &2228237702548837333
 CharacterController:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

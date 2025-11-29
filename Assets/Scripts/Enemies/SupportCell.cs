@@ -19,7 +19,13 @@ public class EnemyReproducer : EnemyBase
     public float HealthCostPerSpawn = 25f;
     public float SpawnInterval = 3f;
 
+    [Header("Type-specific Limits")]
+    public int MaxTransporterSpawn = 2;
+    public int MaxHunterSpawn = 4;
+
     private int currentSpawned = 0;
+    private int currentTransporterSpawned = 0;
+    private int currentHunterSpawned = 0;
     private float nextSpawnTime = 0f;
 
     [Header("Infection Settings")]
@@ -30,6 +36,7 @@ public class EnemyReproducer : EnemyBase
 
     protected override void Start()
     {
+        base.CurrentHealth = 1;
         base.Start();
         rend = GetComponentInChildren<Renderer>();
         UpdateVisualState();
@@ -40,7 +47,6 @@ public class EnemyReproducer : EnemyBase
         base.Update();
         Regenerate();
 
-        // reproduction uniquement si infectée
         if (currentState == EnemyState.Infected &&
             Time.time >= nextSpawnTime &&
             CurrentHealth >= HealthCostPerSpawn &&
@@ -68,6 +74,13 @@ public class EnemyReproducer : EnemyBase
                 break;
 
             GameObject prefabToSpawn = Random.value > 0.5f ? transporterPrefab : hunterPrefab;
+
+            // Vérification des limites par type
+            if (prefabToSpawn == transporterPrefab && currentTransporterSpawned >= MaxTransporterSpawn)
+                continue;
+            if (prefabToSpawn == hunterPrefab && currentHunterSpawned >= MaxHunterSpawn)
+                continue;
+
             Vector3 spawnPos = transform.position + Random.insideUnitSphere * 1f;
             spawnPos.y = transform.position.y;
 
@@ -75,12 +88,13 @@ public class EnemyReproducer : EnemyBase
 
             CurrentHealth -= HealthCostPerSpawn;
             currentSpawned++;
+
+            if (prefabToSpawn == transporterPrefab)
+                currentTransporterSpawned++;
+            else
+                currentHunterSpawned++;
         }
     }
-
-    // ---------------------------
-    // 🔹 Gestion des états d’infection
-    // ---------------------------
 
     public void SetInfected(bool infected)
     {
@@ -98,17 +112,11 @@ public class EnemyReproducer : EnemyBase
             rend.material = neutralMaterial;
     }
 
-    // ---------------------------
-    // 🔹 Gestion des dégâts et guérison
-    // ---------------------------
-
     public override void TakeDamage(float amount)
     {
-        // Si la cellule est neutre, elle n’est pas affectée
         if (currentState == EnemyState.Neutral)
             return;
 
-        // Si infectée, elle peut être “soignée” par le joueur
         CurrentHealth -= amount;
         if (CurrentHealth <= 0)
         {
@@ -123,21 +131,21 @@ public class EnemyReproducer : EnemyBase
     {
         SetInfected(false);
         CurrentHealth = MaxHealth;
-        currentSpawned = 0; // réinitialise le compteur de spawn
+        currentSpawned = 0;
+        currentTransporterSpawned = 0;
+        currentHunterSpawned = 0;
         Debug.Log($"{name} a été soignée par le joueur !");
     }
 
-    // 🔸 On empêche la destruction totale ici
     protected override void Die()
     {
-        // Ne pas détruire si infectée (soignée à la place)
         if (currentState == EnemyState.Infected)
         {
             HealCell();
         }
         else
         {
-            base.Die(); // détruire seulement si neutre
+            base.Die();
         }
     }
 }
